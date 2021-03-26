@@ -21,21 +21,21 @@
       <li>
         <a class="p-3" href="/">Posts</a>
       </li>
-
-      <ul class="flex items-center">
-        <li>
-          <a class="p-3" href="/">Prince Eldrige</a>
-        </li>
-        <li>
-          <a class="p-3" href="/">Login</a>
-        </li>
-        <li>
-          <a class="p-3" href="/">Register</a>
-        </li>
-        <li>
-          <a class="p-3" href="/">Logout</a>
-        </li>
-      </ul>
+    </ul>
+    <ul class="flex items-center">
+      <li>
+        <a class="p-3" href="/">Prince Eldrige</a>
+      </li>
+      <li>
+        <a class="p-3" href="/">Login</a>
+      </li>
+      <li>
+        <a class="p-3" href="/">Register</a>
+      </li>
+      <li>
+        <a class="p-3" href="/">Logout</a>
+      </li>
+    </ul>
   </nav>
   <!-- this injects content to other portions of the app -->
   @yield('content')
