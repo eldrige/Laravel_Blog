@@ -24,14 +24,17 @@
         </ul>
         <ul class="flex items-center">
 
-            @if (auth()->user())
+            @auth
                 <li>
                     <a class="p-3" href="/">Prince Eldrige</a>
                 </li>
                 <li>
                     <a class="p-3" href="/">Logout</a>
                 </li>
-            @else
+            @endauth
+
+
+            @guest
 
                 <li>
                     <a class="p-3" href="/">Login</a>
@@ -39,7 +42,7 @@
                 <li>
                     <a class="p-3" href="{{ route('register') }}">Register</a>
                 </li>
-            @endif
+            @endguest
 
 
 
