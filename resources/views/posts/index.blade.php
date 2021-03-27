@@ -32,7 +32,9 @@
 
                 {{ $post->user->username}}
             </a>
-            <span class="text-sm text-gray-500">date</span>
+            <span class="text-sm text-gray-500">
+                {{ $post->created_at->diffForHumans()}}
+            </span>
             <p class="mb-2">
                 {{ $post->body }}
             </p>
