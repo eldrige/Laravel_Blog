@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +25,7 @@ Route::get('/posts', function () {
 });
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 Route::post('/register', [RegisterController::class, 'store']);
