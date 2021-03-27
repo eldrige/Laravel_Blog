@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Laravel Blog</title>
     <link rel="stylesheet" href={{ 'css/app.css' }}>
 </head>
 
@@ -37,7 +37,7 @@
             @guest
 
                 <li>
-                    <a class="p-3" href="/">Login</a>
+                    <a class="p-3" href="{{ route('login') }}">Login</a>
                 </li>
                 <li>
                     <a class="p-3" href="{{ route('register') }}">Register</a>
