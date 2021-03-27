@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -19,13 +20,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/posts', function () {
     return view('posts/index');
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/logout', [LogoutController::class, 'flush'])->name('logout');
 
 Route::post('/login', [LoginController::class, 'store']);
 

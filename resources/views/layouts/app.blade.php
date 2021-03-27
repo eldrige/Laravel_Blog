@@ -35,7 +35,7 @@
                     <a class="p-3" href="/">Prince Eldrige</a>
                 </li>
                 <li>
-                    <a class="p-3" href="/">Logout</a>
+                    <a class="p-3" href="{{ route('logout') }}">Logout</a>
                 </li>
             @endauth
 
