@@ -11,6 +11,12 @@
 
 <body class="bg-gray-200">
     <nav class="p-6 bg-white flex justify-between mb-6">
+
+        @if (session('status'))
+            {{ session('status') }}
+        @endif
+
+
         <ul class="flex items-center">
             <li>
                 <a class="p-3" href="/">Home</a>

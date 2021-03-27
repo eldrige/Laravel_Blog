@@ -27,6 +27,8 @@ Route::get('/posts', function () {
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 
+Route::post('/login', [LoginController::class, 'store']);
+
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

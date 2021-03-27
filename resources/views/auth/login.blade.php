@@ -3,7 +3,7 @@
 @section('content')
     <div class="flex justify-center">
         <div class="w-4/12 bg-white p-6 rounded-lg">
-            <form action="{{ route('register') }}" method="post">
+            <form action="{{ route('login') }}" method="post">
                 @csrf
                 <!-- EMAIL -->
                 <div class="mb-4">
@@ -26,7 +26,6 @@
                         <div class="text-red-500 mt-2 text-small">
                             {{ $message }}
                         </div>
-
                     @enderror
                 </div>
 
