@@ -7,6 +7,18 @@
       @csrf
       <!-- USERNAME -->
       <div class="mb-4">
+        <label for="name" class="sr-only">Name</label>
+        <input type="text" name="name" id="name" placeholder="enter your name" class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="{{ old('name')}}">
+
+        <!-- if we have an error for name -->
+        @error('name')
+        <div class="text-red-500 mt-2 text-small">
+          {{ $message}}
+        </div>
+
+        @enderror
+      </div>
+      <div class="mb-4">
         <label for="username" class="sr-only">Username</label>
         <input type="text" name="username" id="username" placeholder="enter your username" class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="{{ old('username')}}">
 
@@ -42,8 +54,8 @@
       </div>
       <!-- confirm password -->
       <div class="mb-4">
-        <label for="confirm-password" class="sr-only">Confirm Password</label>
-        <input type="password" name="confirm-password" id="comfirm-password" placeholder="Confirm Password" class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="">
+        <label for="password_confirmation" class="sr-only">Confirm Password</label>
+        <input type="password" name="password_confirmation" id="comfirmed" placeholder="Confirm Password" class="bg-gray-100 border-2 w-full p-4 rounded-lg" value="">
       </div>
 
       <div>
