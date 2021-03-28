@@ -49,4 +49,9 @@ class User extends Authenticatable
         // thid defines our relationship
         return $this->hasMany(Post::class);
     }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
 }

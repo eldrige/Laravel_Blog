@@ -39,7 +39,7 @@
                 {{ $post->body }}
             </p>
             <div class="flex items-center">
-                <form method="post" class="mr-1">
+                <form method="post" class="mr-1" action="{{ route('postlike', $post->id)}}">
                     @csrf
                     <button type="submit" class="text-blue-500">Like</button>
                 </form>
