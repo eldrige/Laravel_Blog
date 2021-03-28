@@ -10,7 +10,7 @@ class PostController extends Controller
     public function index()
     {
         // return all posts form db
-        $posts = Post::paginate(5);  //a laravel collection
+        $posts = Post::with(['user', 'likes'])->paginate(5);  //a laravel collection
         return view('posts.index', [
             'posts' => $posts
         ]);
@@ -32,6 +32,13 @@ class PostController extends Controller
             'body' => $request->body
         ]);
 
+        return back();
+    }
+
+
+    public function destroy(Post $post)
+    {
+        $post->delete();
         return back();
     }
 }

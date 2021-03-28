@@ -40,6 +40,7 @@ Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy']);
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::post('/posts', [PostController::class, 'store']);
+Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
 
 // the auth middlware protects routes
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
