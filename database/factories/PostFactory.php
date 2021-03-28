@@ -22,7 +22,8 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            //
+            //  generate sentences of length 20 for each post
+            'body' => $this->faker->sentence(20)
         ];
     }
 }

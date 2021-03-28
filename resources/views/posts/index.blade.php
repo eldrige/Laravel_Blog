@@ -40,6 +40,12 @@
             </p>
         </div>
         @endforeach
+
+        <!-- this is for pagination links -->
+        {{ $posts->links()}}
+
+
+
         @else
         <p>
             There are no posts
