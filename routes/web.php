@@ -30,17 +30,16 @@ Route::get('/posts', function () {
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/logout', [LogoutController::class, 'flush'])->name('logout');
-
 Route::post('/login', [LoginController::class, 'store']);
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
-Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('postlike');
+Route::post('/register', [RegisterController::class, 'store']);
 
+Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('postlike');
+Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy']);
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::post('/posts', [PostController::class, 'store']);
 
 // the auth middlware protects routes
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
-
-Route::post('/register', [RegisterController::class, 'store']);

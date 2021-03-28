@@ -39,15 +39,17 @@
                 {{ $post->body }}
             </p>
             <div class="flex items-center">
-                @if ($post->likedBy(auth()->user()))
-                <form method="post" class="mr-1" action="{{ route('postlike', $post->id)}}">
+                @if (!$post->likedBy(auth()->user()))
+                <form method="post" class="mr-1" action="{{ route('postlike', $post)}}">
                     @csrf
                     <button type="submit" class="text-blue-500">Like</button>
                 </form>
                 @else
                 <div class="flex items-center">
-                    @csrf
-                    <form method="post" class="mr-1">
+
+                    <form method="post" class="mr-1" action="{{ route('postlike', $post)}}">
+                        @csrf
+                        @method('DELETE')
                         <button type="submit" class="text-blue-500">Unlike</button>
                     </form>
 
