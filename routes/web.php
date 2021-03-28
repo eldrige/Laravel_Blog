@@ -34,7 +34,7 @@ Route::get('/logout', [LogoutController::class, 'flush'])->name('logout');
 Route::post('/login', [LoginController::class, 'store']);
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
-Route::post('/posts/{id}/likes', [PostLikeController::class, 'store'])->name('postlike');
+Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('postlike');
 
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
